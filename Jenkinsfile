@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script {
                     env.image_tag = new Date().format("yyyy-MM-dd-HHmmss")
-                    env.full_image = "${env.image_name}:${env.image_tag}"
+                    env.full_image = "${env.image_name}-${env.image_tag}"
                 }
             }
         }
